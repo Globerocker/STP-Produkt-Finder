@@ -74,7 +74,7 @@ export const PRODUCT_FEATURES: { id: string; features: ({ id: string; [key: stri
 ];
 
 export const PRODUCT_CALENDAR_URLS: { [key: string]: string } = {
-  advoware: 'https://meetings-eu1.hubspot.com/advoware',
+  advoware: 'https://meetings-eu1.hubspot.com/advoware/toolfinder',
   winmacs: 'https://meetings-eu1.hubspot.com/winmacs',
   lexolution: 'https://meetings-eu1.hubspot.com/lexolution',
   amberlo: 'https://www.amberlo.io/ch',
