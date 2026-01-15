@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Page, Answers, RecommendationResult, Language } from './types';
 import LandingPage from './components/LandingPage';
 import QuizPage from './components/QuizPage';
@@ -67,6 +68,7 @@ const AppContent: React.FC = () => {
         {renderPage()}
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 };
