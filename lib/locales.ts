@@ -5,6 +5,8 @@ const de = {
     app: {
         title: 'Produkt-Finder',
         loading: 'Lade Ergebnisse...',
+        backToResults: 'Zurück zu den Ergebnissen',
+        productComparison: 'Produktvergleich',
     },
     landing: {
         title: 'Finden Sie die perfekte Kanzleisoftware für Ihre Bedürfnisse.',
@@ -34,6 +36,7 @@ const de = {
         allWishesMet: 'Alle von Ihnen genannten Wünsche werden von {productName} erfüllt.',
         alternativeOptions: 'Alternative Optionen',
         restart: 'Analyse neu starten',
+        compare: 'Vergleichen',
     },
     comparison: {
         title: 'Detaillierter Produktvergleich',
@@ -60,29 +63,29 @@ const de = {
         ] as MaturityLevel[]
     },
     calculator: {
-        optimalSoftware: { title: 'Optimale Software im Einsatz', value: 'Sehr gut', unit: 'passend', description: 'Für Ihre Anforderungen haben Sie bereits eine optimale Kanzleisoftware im Einsatz.'},
-        efficiencyGain: { title: 'Potenzielle Effizienzsteigerung', description: 'durch optimierte Prozesse und digitale Workflows.'},
+        optimalSoftware: { title: 'Optimale Software im Einsatz', value: 'Sehr gut', unit: 'passend', description: 'Für Ihre Anforderungen haben Sie bereits eine optimale Kanzleisoftware im Einsatz.' },
+        efficiencyGain: { title: 'Potenzielle Effizienzsteigerung', description: 'durch optimierte Prozesse und digitale Workflows.' },
         timeSavings: { title: 'Geschätzte Zeitersparnis', unit: 'Stunden / Monat', descriptionBase: 'durch die Umstellung und Optimierung Ihrer Kanzleiprozesse.', descriptionAI: 'durch optimierte Prozesse und den potenziellen Einsatz von KI-Unterstützung.' },
-        monetaryValue: { title: 'Monetärer Mehrwert', unit: '€ / Monat', description: 'basierend auf Ihrer geschätzten Zeitersparnis und Ihrem Stundensatz.'},
+        monetaryValue: { title: 'Monetärer Mehrwert', unit: '€ / Monat', description: 'basierend auf Ihrer geschätzten Zeitersparnis und Ihrem Stundensatz.' },
     },
     contentHub: {
         title: 'Weiterführende Inhalte für Sie',
         items: {
-            webinar_digital_firm_2025: { title: 'Webinar: Die digitale Kanzlei 2025', description: 'Erfahren Sie, wie Sie mit Cloud-Technologie und KI Ihre Kanzlei zukunftssicher machen.'},
-            whitepaper_increase_efficiency: { title: 'Whitepaper: Effizienz steigern', description: 'Ein Leitfaden zur Optimierung von Workflows in mittelständischen Kanzleien.'},
-            blog_legal_tech_trends: { title: 'Blog: Legal Tech Trends', description: 'Lesen Sie unseren neuesten Artikel über die wichtigsten Technologietrends für Anwälte.'},
-            blog_successful_solo: { title: 'Blog: Erfolgreich als Einzelanwalt', description: 'Tipps und Tricks für den Kanzleialltag, von Mandatsgewinnung bis zur Abrechnung.'},
-            checklist_firm_foundation: { title: 'Checkliste: Kanzleigründung', description: 'Die wichtigsten Schritte für einen erfolgreichen Start in die Selbstständigkeit.'},
-            webinar_cloud_beginners: { title: 'Webinar: Cloud für Einsteiger', description: 'Entdecken Sie die Vorteile einer Cloud-basierten Kanzleisoftware für mehr Flexibilität.'},
-            webinar_digital_insolvency: { title: 'Webinar: Digitalisierung in der Insolvenzverwaltung', description: 'So optimieren Sie Ihre Prozesse von der Antragsstellung bis zur Verteilung.'},
-            whitepaper_new_gis: { title: 'Whitepaper: Das neue GIS', description: 'Alle Vorteile des neuen Gläubigerinformationssystems im Überblick.'},
-            blog_insolvency_law_news: { title: 'Blog: Aktuelles aus dem Insolvenzrecht', description: 'Unser Experte kommentiert die neuesten Gesetzesänderungen und Urteile.'},
-            whitepaper_ai_legal_dept: { title: 'Whitepaper: KI in der Rechtsabteilung', description: 'Wie künstliche Intelligenz die Vertragsanalyse und Recherche revolutioniert.'},
-            blog_cost_to_value: { title: 'Blog: Vom Cost- zum Value-Center', description: 'Strategien, um den Wertbeitrag Ihrer Rechtsabteilung im Unternehmen sichtbar zu machen.'},
-            webinar_knowledge_management: { title: 'Webinar: Wissensmanagement', description: 'So bauen Sie eine zentrale Wissensdatenbank auf und sichern wertvolles Know-how.'},
-            blog_creditor_rights: { title: 'Blog: Gläubigerrechte im Insolvenzfall', description: 'Ein Überblick über die wichtigsten Rechte und Pflichten für Unternehmen als Gläubiger.'},
-            tour_creditor_hub: { title: 'Produkt-Tour: Creditor Hub', description: 'Sehen Sie in einer kurzen Video-Tour, wie Sie Ihre Forderungen effizienter verwalten können.'},
-            download_claims_management: { title: 'Download: Leitfaden Forderungsmanagement', description: 'Best Practices zur Minimierung von Ausfallrisiken und zur Durchsetzung Ihrer Ansprüche.'},
+            webinar_digital_firm_2025: { title: 'Webinar: Die digitale Kanzlei 2025', description: 'Erfahren Sie, wie Sie mit Cloud-Technologie und KI Ihre Kanzlei zukunftssicher machen.' },
+            whitepaper_increase_efficiency: { title: 'Whitepaper: Effizienz steigern', description: 'Ein Leitfaden zur Optimierung von Workflows in mittelständischen Kanzleien.' },
+            blog_legal_tech_trends: { title: 'Blog: Legal Tech Trends', description: 'Lesen Sie unseren neuesten Artikel über die wichtigsten Technologietrends für Anwälte.' },
+            blog_successful_solo: { title: 'Blog: Erfolgreich als Einzelanwalt', description: 'Tipps und Tricks für den Kanzleialltag, von Mandatsgewinnung bis zur Abrechnung.' },
+            checklist_firm_foundation: { title: 'Checkliste: Kanzleigründung', description: 'Die wichtigsten Schritte für einen erfolgreichen Start in die Selbstständigkeit.' },
+            webinar_cloud_beginners: { title: 'Webinar: Cloud für Einsteiger', description: 'Entdecken Sie die Vorteile einer Cloud-basierten Kanzleisoftware für mehr Flexibilität.' },
+            webinar_digital_insolvency: { title: 'Webinar: Digitalisierung in der Insolvenzverwaltung', description: 'So optimieren Sie Ihre Prozesse von der Antragsstellung bis zur Verteilung.' },
+            whitepaper_new_gis: { title: 'Whitepaper: Das neue GIS', description: 'Alle Vorteile des neuen Gläubigerinformationssystems im Überblick.' },
+            blog_insolvency_law_news: { title: 'Blog: Aktuelles aus dem Insolvenzrecht', description: 'Unser Experte kommentiert die neuesten Gesetzesänderungen und Urteile.' },
+            whitepaper_ai_legal_dept: { title: 'Whitepaper: KI in der Rechtsabteilung', description: 'Wie künstliche Intelligenz die Vertragsanalyse und Recherche revolutioniert.' },
+            blog_cost_to_value: { title: 'Blog: Vom Cost- zum Value-Center', description: 'Strategien, um den Wertbeitrag Ihrer Rechtsabteilung im Unternehmen sichtbar zu machen.' },
+            webinar_knowledge_management: { title: 'Webinar: Wissensmanagement', description: 'So bauen Sie eine zentrale Wissensdatenbank auf und sichern wertvolles Know-how.' },
+            blog_creditor_rights: { title: 'Blog: Gläubigerrechte im Insolvenzfall', description: 'Ein Überblick über die wichtigsten Rechte und Pflichten für Unternehmen als Gläubiger.' },
+            tour_creditor_hub: { title: 'Produkt-Tour: Creditor Hub', description: 'Sehen Sie in einer kurzen Video-Tour, wie Sie Ihre Forderungen effizienter verwalten können.' },
+            download_claims_management: { title: 'Download: Leitfaden Forderungsmanagement', description: 'Best Practices zur Minimierung von Ausfallrisiken und zur Durchsetzung Ihrer Ansprüche.' },
         }
     },
     footer: {
@@ -144,14 +147,16 @@ const de = {
         location: { text: 'Wo befindet sich der Hauptsitz Ihrer Kanzlei?', options: [{ label: 'Deutschland', value: 'de' }, { label: 'Schweiz', value: 'ch' }] },
         lawyerCount: { text: 'Wie viele Anwälte sind in Ihrer Kanzlei tätig?', placeholder: 'z.B. 7' },
         refaCount: { text: 'Wie viele Rechtsanwaltsfachangestellte (ReFa/ReNo) beschäftigen Sie?', placeholder: 'z.B. 12' },
-        currentSoftware: { text: 'Welche Kanzleisoftware nutzen Sie aktuell?', options: [
-            { label: 'RA-MICRO', value: 'ra_micro' }, { label: 'DATEV Anwalt', value: 'datev' }, { label: 'AnNoText', value: 'annotext' },
-            { label: 'Lexolution', value: 'lexolution' }, { label: 'Advoware', value: 'advoware' }, { label: 'Winmacs', value: 'winmacs' },
-            { label: 'Winjur', value: 'winjur' }, { label: 'Amberlo', value: 'amberlo' }, { label: 'Actaport', value: 'actaport' },
-            { label: 'Legalvisio', value: 'legalvisio' }, { label: 'Renostar', value: 'renostar' }, { label: 'NoRA Advanced', value: 'nora_advanced' },
-            { label: 'a-Jur', value: 'a_jur' }, { label: 'Advolux', value: 'advolux' }, { label: 'Keine dedizierte Software (z.B. Word/Excel)', value: 'none' }, 
-            { label: 'Andere', value: 'other' }
-          ] as QuestionOption[] },
+        currentSoftware: {
+            text: 'Welche Kanzleisoftware nutzen Sie aktuell?', options: [
+                { label: 'RA-MICRO', value: 'ra_micro' }, { label: 'DATEV Anwalt', value: 'datev' }, { label: 'AnNoText', value: 'annotext' },
+                { label: 'Lexolution', value: 'lexolution' }, { label: 'Advoware', value: 'advoware' }, { label: 'Winmacs', value: 'winmacs' },
+                { label: 'Winjur', value: 'winjur' }, { label: 'Amberlo', value: 'amberlo' }, { label: 'Actaport', value: 'actaport' },
+                { label: 'Legalvisio', value: 'legalvisio' }, { label: 'Renostar', value: 'renostar' }, { label: 'NoRA Advanced', value: 'nora_advanced' },
+                { label: 'a-Jur', value: 'a_jur' }, { label: 'Advolux', value: 'advolux' }, { label: 'Keine dedizierte Software (z.B. Word/Excel)', value: 'none' },
+                { label: 'Andere', value: 'other' }
+            ] as QuestionOption[]
+        },
         currentSoftwareOther: { text: 'Bitte geben Sie Ihre aktuell genutzte Software an.', placeholder: 'z.B. Kanzleisoftware XY' },
         workFocus: { text: 'Arbeiten Sie überwiegend forensisch oder wirtschaftsberatend?', options: [{ label: 'Forensisch', value: 'forensic' }, { label: 'Wirtschaftsberatend', value: 'consulting' }] },
         billingType: { text: 'Wie rechnen Sie überwiegend ab?', options: [{ label: 'Nach RVG', value: 'rvg' }, { label: 'Auf Honorarbasis', value: 'hourly' }, { label: 'Beides', value: 'mixed' }] },
@@ -180,6 +185,8 @@ const en = {
     app: {
         title: 'Product Finder',
         loading: 'Loading results...',
+        backToResults: 'Back to Results',
+        productComparison: 'Product Comparison',
     },
     landing: {
         title: 'Find the perfect law firm software for your needs.',
@@ -209,6 +216,7 @@ const en = {
         allWishesMet: 'All of your stated wishes are fulfilled by {productName}.',
         alternativeOptions: 'Alternative Options',
         restart: 'Restart Analysis',
+        compare: 'Compare',
     },
     comparison: {
         title: 'Detailed Product Comparison',
@@ -235,29 +243,29 @@ const en = {
         ] as MaturityLevel[]
     },
     calculator: {
-        optimalSoftware: { title: 'Optimal Software in Use', value: 'Excellent', unit: 'fit', description: 'You are already using an optimal law firm software for your requirements.'},
-        efficiencyGain: { title: 'Potential Efficiency Gain', description: 'through optimized processes and digital workflows.'},
+        optimalSoftware: { title: 'Optimal Software in Use', value: 'Excellent', unit: 'fit', description: 'You are already using an optimal law firm software for your requirements.' },
+        efficiencyGain: { title: 'Potential Efficiency Gain', description: 'through optimized processes and digital workflows.' },
         timeSavings: { title: 'Estimated Time Savings', unit: 'hours / month', descriptionBase: 'by switching and optimizing your law firm processes.', descriptionAI: 'through optimized processes and the potential use of AI support.' },
-        monetaryValue: { title: 'Monetary Value', unit: '$ / month', description: 'based on your estimated time savings and hourly rate.'},
+        monetaryValue: { title: 'Monetary Value', unit: '$ / month', description: 'based on your estimated time savings and hourly rate.' },
     },
     contentHub: {
         title: 'Further Content for You',
         items: {
-            webinar_digital_firm_2025: { title: 'Webinar: The Digital Law Firm 2025', description: 'Learn how to future-proof your firm with cloud technology and AI.'},
-            whitepaper_increase_efficiency: { title: 'Whitepaper: Increasing Efficiency', description: 'A guide to optimizing workflows in mid-sized law firms.'},
-            blog_legal_tech_trends: { title: 'Blog: Legal Tech Trends', description: 'Read our latest article on the most important technology trends for lawyers.'},
-            blog_successful_solo: { title: 'Blog: Succeeding as a Solo Practitioner', description: 'Tips and tricks for daily firm life, from client acquisition to billing.'},
-            checklist_firm_foundation: { title: 'Checklist: Starting a Law Firm', description: 'The most important steps for a successful start to self-employment.'},
-            webinar_cloud_beginners: { title: 'Webinar: Cloud for Beginners', description: 'Discover the benefits of cloud-based law firm software for more flexibility.'},
-            webinar_digital_insolvency: { title: 'Webinar: Digitalization in Insolvency Administration', description: 'How to optimize your processes from application to distribution.'},
-            whitepaper_new_gis: { title: 'Whitepaper: The New GIS', description: 'An overview of all the advantages of the new creditor information system.'},
-            blog_insolvency_law_news: { title: 'Blog: News in Insolvency Law', description: 'Our expert comments on the latest legislative changes and court rulings.'},
-            whitepaper_ai_legal_dept: { title: 'Whitepaper: AI in the Legal Department', description: 'How artificial intelligence is revolutionizing contract analysis and research.'},
-            blog_cost_to_value: { title: 'Blog: From Cost Center to Value Center', description: 'Strategies to make the value contribution of your legal department visible in the company.'},
-            webinar_knowledge_management: { title: 'Webinar: Knowledge Management', description: 'How to build a central knowledge database and secure valuable know-how.'},
-            blog_creditor_rights: { title: 'Blog: Creditor Rights in Insolvency', description: 'An overview of the most important rights and obligations for companies as creditors.'},
-            tour_creditor_hub: { title: 'Product Tour: Creditor Hub', description: 'See in a short video tour how you can manage your claims more efficiently.'},
-            download_claims_management: { title: 'Download: Guide to Claims Management', description: 'Best practices for minimizing default risks and enforcing your claims.'},
+            webinar_digital_firm_2025: { title: 'Webinar: The Digital Law Firm 2025', description: 'Learn how to future-proof your firm with cloud technology and AI.' },
+            whitepaper_increase_efficiency: { title: 'Whitepaper: Increasing Efficiency', description: 'A guide to optimizing workflows in mid-sized law firms.' },
+            blog_legal_tech_trends: { title: 'Blog: Legal Tech Trends', description: 'Read our latest article on the most important technology trends for lawyers.' },
+            blog_successful_solo: { title: 'Blog: Succeeding as a Solo Practitioner', description: 'Tips and tricks for daily firm life, from client acquisition to billing.' },
+            checklist_firm_foundation: { title: 'Checklist: Starting a Law Firm', description: 'The most important steps for a successful start to self-employment.' },
+            webinar_cloud_beginners: { title: 'Webinar: Cloud for Beginners', description: 'Discover the benefits of cloud-based law firm software for more flexibility.' },
+            webinar_digital_insolvency: { title: 'Webinar: Digitalization in Insolvency Administration', description: 'How to optimize your processes from application to distribution.' },
+            whitepaper_new_gis: { title: 'Whitepaper: The New GIS', description: 'An overview of all the advantages of the new creditor information system.' },
+            blog_insolvency_law_news: { title: 'Blog: News in Insolvency Law', description: 'Our expert comments on the latest legislative changes and court rulings.' },
+            whitepaper_ai_legal_dept: { title: 'Whitepaper: AI in the Legal Department', description: 'How artificial intelligence is revolutionizing contract analysis and research.' },
+            blog_cost_to_value: { title: 'Blog: From Cost Center to Value Center', description: 'Strategies to make the value contribution of your legal department visible in the company.' },
+            webinar_knowledge_management: { title: 'Webinar: Knowledge Management', description: 'How to build a central knowledge database and secure valuable know-how.' },
+            blog_creditor_rights: { title: 'Blog: Creditor Rights in Insolvency', description: 'An overview of the most important rights and obligations for companies as creditors.' },
+            tour_creditor_hub: { title: 'Product Tour: Creditor Hub', description: 'See in a short video tour how you can manage your claims more efficiently.' },
+            download_claims_management: { title: 'Download: Guide to Claims Management', description: 'Best practices for minimizing default risks and enforcing your claims.' },
         }
     },
     footer: {
@@ -319,14 +327,16 @@ const en = {
         location: { text: 'Where is your firm\'s main office located?', options: [{ label: 'Germany', value: 'de' }, { label: 'Switzerland', value: 'ch' }] },
         lawyerCount: { text: 'How many lawyers are active in your firm?', placeholder: 'e.g., 7' },
         refaCount: { text: 'How many paralegals do you employ?', placeholder: 'e.g., 12' },
-        currentSoftware: { text: 'Which law firm software are you currently using?', options: [
-            { label: 'RA-MICRO', value: 'ra_micro' }, { label: 'DATEV Anwalt', value: 'datev' }, { label: 'AnNoText', value: 'annotext' },
-            { label: 'Lexolution', value: 'lexolution' }, { label: 'Advoware', value: 'advoware' }, { label: 'Winmacs', value: 'winmacs' },
-            { label: 'Winjur', value: 'winjur' }, { label: 'Amberlo', value: 'amberlo' }, { label: 'Actaport', value: 'actaport' },
-            { label: 'Legalvisio', value: 'legalvisio' }, { label: 'Renostar', value: 'renostar' }, { label: 'NoRA Advanced', value: 'nora_advanced' },
-            { label: 'a-Jur', value: 'a_jur' }, { label: 'Advolux', value: 'advolux' }, { label: 'No dedicated software (e.g., Word/Excel)', value: 'none' }, 
-            { label: 'Other', value: 'other' }
-          ] as QuestionOption[] },
+        currentSoftware: {
+            text: 'Which law firm software are you currently using?', options: [
+                { label: 'RA-MICRO', value: 'ra_micro' }, { label: 'DATEV Anwalt', value: 'datev' }, { label: 'AnNoText', value: 'annotext' },
+                { label: 'Lexolution', value: 'lexolution' }, { label: 'Advoware', value: 'advoware' }, { label: 'Winmacs', value: 'winmacs' },
+                { label: 'Winjur', value: 'winjur' }, { label: 'Amberlo', value: 'amberlo' }, { label: 'Actaport', value: 'actaport' },
+                { label: 'Legalvisio', value: 'legalvisio' }, { label: 'Renostar', value: 'renostar' }, { label: 'NoRA Advanced', value: 'nora_advanced' },
+                { label: 'a-Jur', value: 'a_jur' }, { label: 'Advolux', value: 'advolux' }, { label: 'No dedicated software (e.g., Word/Excel)', value: 'none' },
+                { label: 'Other', value: 'other' }
+            ] as QuestionOption[]
+        },
         currentSoftwareOther: { text: 'Please specify your current software.', placeholder: 'e.g., LawFirm XYZ' },
         workFocus: { text: 'Do you work predominantly in forensic or business consulting?', options: [{ label: 'Forensic', value: 'forensic' }, { label: 'Business Consulting', value: 'consulting' }] },
         billingType: { text: 'How do you predominantly bill?', options: [{ label: 'Statutory fees (RVG)', value: 'rvg' }, { label: 'On an hourly basis', value: 'hourly' }, { label: 'Both', value: 'mixed' }] },

@@ -22,7 +22,7 @@ export const PRODUCTS: Omit<Product, 'name' | 'description' | 'shortDescription'
     logoUrl: 'https://ik.imagekit.io/zi9ddio0x/Icon%20STP/Winjur-DaGon.png?updatedAt=1761497134473',
     demoUrl: 'https://www.stp.one/de/produkte/winjur'
   },
-   {
+  {
     id: 'amberlo',
     logoUrl: 'https://ik.imagekit.io/zi9ddio0x/Icon%20STP/Logo_Amberlo_blue%20(1).png?updatedAt=1761571787574',
     demoUrl: 'https://www.stp.one/de/produkte/amberlo'
@@ -30,11 +30,11 @@ export const PRODUCTS: Omit<Product, 'name' | 'description' | 'shortDescription'
 ];
 
 const p = {
-    winmacs: 'winmacs', advoware: 'advoware', winjur: 'winjur', lexolution: 'lexolution', amberlo: 'amberlo'
+  winmacs: 'winmacs', advoware: 'advoware', winjur: 'winjur', lexolution: 'lexolution', amberlo: 'amberlo'
 };
 
 // FIX: Replaced `Omit<ProductFeature, 'name'>` with a more explicit type to fix type inference issues with index signatures.
-export const PRODUCT_FEATURES: { id: string; features: ({ id: string; [key: string]: boolean | string; })[] }[] = [
+export const PRODUCT_FEATURES: { id: string; features: ({ id: string;[key: string]: boolean | string; })[] }[] = [
   {
     id: 'core_management',
     features: [
@@ -54,26 +54,29 @@ export const PRODUCT_FEATURES: { id: string; features: ({ id: string; [key: stri
   {
     id: 'specialization',
     features: [
-        { id: 'notariat_module', [p.winmacs]: true, [p.advoware]: true, [p.winjur]: false, [p.lexolution]: false, [p.amberlo]: false },
-        { id: 'client_portal', [p.winmacs]: false, [p.advoware]: true, [p.winjur]: true, [p.lexolution]: true, [p.amberlo]: true },
+      { id: 'notariat_module', [p.winmacs]: true, [p.advoware]: true, [p.winjur]: false, [p.lexolution]: false, [p.amberlo]: false },
+      { id: 'client_portal', [p.winmacs]: false, [p.advoware]: true, [p.winjur]: true, [p.lexolution]: true, [p.amberlo]: true },
     ]
   },
   {
     id: 'knowledge_data',
     features: [
-        { id: 'advanced_dms', [p.winmacs]: true, [p.advoware]: true, [p.winjur]: false, [p.lexolution]: true, [p.amberlo]: true },
-        { id: 'business_analytics', [p.winmacs]: false, [p.advoware]: false, [p.winjur]: false, [p.lexolution]: true, [p.amberlo]: true },
+      { id: 'advanced_dms', [p.winmacs]: true, [p.advoware]: true, [p.winjur]: false, [p.lexolution]: true, [p.amberlo]: true },
+      { id: 'business_analytics', [p.winmacs]: false, [p.advoware]: false, [p.winjur]: false, [p.lexolution]: true, [p.amberlo]: true },
     ]
   },
   {
     id: 'ai',
     features: [
-        { id: 'ai_integrated_addons', [p.winmacs]: false, [p.advoware]: true, [p.winjur]: false, [p.lexolution]: false, [p.amberlo]: true },
+      { id: 'ai_integrated_addons', [p.winmacs]: false, [p.advoware]: true, [p.winjur]: false, [p.lexolution]: false, [p.amberlo]: true },
     ]
   }
 ];
 
+// TODO: Update these URLs with your specific HubSpot Meeting Calendars for each product team.
+// If a product doesn't have a specific calendar, you can leave the generic demo URL or set it to null.
 export const PRODUCT_CALENDAR_URLS: { [key: string]: string } = {
+
   advoware: 'https://meetings-eu1.hubspot.com/advoware/toolfinder',
   winmacs: 'https://meetings-eu1.hubspot.com/winmacs',
   lexolution: 'https://meetings-eu1.hubspot.com/lexolution',

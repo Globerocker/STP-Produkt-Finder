@@ -5,6 +5,8 @@ export enum Page {
   Landing,
   Quiz,
   Result,
+  Comparison,
+  Dashboard
 }
 
 export type Language = 'de' | 'en';
@@ -29,7 +31,7 @@ export interface Product {
 
 export interface ProductFeature {
   id: string;
-  name:string;
+  name: string;
   [productId: string]: boolean | string;
 }
 
@@ -39,8 +41,8 @@ export interface FeatureCategory {
 }
 
 export interface QuestionOption {
-    label: string;
-    value: string | number;
+  label: string;
+  value: string | number;
 }
 
 export interface Question {
@@ -59,7 +61,7 @@ export interface Question {
 }
 
 export interface Answers {
-  [key: string]: string | number | null | undefined; 
+  [key: string]: string | number | null | undefined;
 }
 
 export interface GeminiSummary {
@@ -83,9 +85,9 @@ export interface ValuePropositionResult {
 }
 
 export interface MaturityLevel {
-    min: number;
-    max: number;
-    stage: number;
-    title: string;
-    description: string;
+  min: number;
+  max: number;
+  stage: number;
+  title: string;
+  description: string;
 }

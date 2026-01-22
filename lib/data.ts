@@ -10,8 +10,8 @@ const getLocalizedProducts = (language: Language): Product[] => {
   }));
 };
 
-const getLocalizedFeatures = (language: Language): ProductFeature[] => {
-  return PRODUCT_FEATURES.flatMap(cat => 
+export const getLocalizedFeatures = (language: Language): ProductFeature[] => {
+  return PRODUCT_FEATURES.flatMap(cat =>
     cat.features.map(f => ({
       ...f,
       // FIX: Cast features object to allow indexing by a string variable, resolving type errors.
@@ -22,9 +22,9 @@ const getLocalizedFeatures = (language: Language): ProductFeature[] => {
 
 
 const calculateFeatureScore = (
-    products: Product[], 
-    allFeatures: ProductFeature[],
-    desiredFeatureIds: string[]
+  products: Product[],
+  allFeatures: ProductFeature[],
+  desiredFeatureIds: string[]
 ): Map<string, number> => {
   const scores = new Map<string, number>();
   products.forEach(product => {
@@ -71,7 +71,7 @@ export const getProductRecommendations = (answers: Answers): RecommendationResul
 
   potentialProducts.forEach(p => {
     let score = 50; // Neutral base
-    
+
     // Score by lawyer count
     if (lawyerCount > 0) {
       if (p.id === 'lexolution') {
@@ -92,64 +92,64 @@ export const getProductRecommendations = (answers: Answers): RecommendationResul
 
     // Score by work focus
     if (answers.workFocus === 'consulting') {
-        if (p.id === 'lexolution' || p.id === 'amberlo') score += 40;
+      if (p.id === 'lexolution' || p.id === 'amberlo') score += 40;
     }
 
     // Score by billing type
     const billingType = answers.billingType;
     if (billingType === 'hourly') {
-        if (p.id === 'lexolution' || p.id === 'amberlo') score += 30;
+      if (p.id === 'lexolution' || p.id === 'amberlo') score += 30;
     } else if (billingType === 'rvg') {
-        if (p.id === 'advoware' || p.id === 'winmacs') score += 20;
+      if (p.id === 'advoware' || p.id === 'winmacs') score += 20;
     } else if (billingType === 'mixed') {
-        if (['lexolution', 'amberlo', 'advoware', 'winmacs'].includes(p.id)) score += 10;
+      if (['lexolution', 'amberlo', 'advoware', 'winmacs'].includes(p.id)) score += 10;
     }
 
     // Score by notary needs
     if (answers.notary === 1) {
-        if (p.id === 'winmacs' || p.id === 'advoware') score += 50;
+      if (p.id === 'winmacs' || p.id === 'advoware') score += 50;
     }
 
     baseScores.set(p.id, score);
   });
-  
+
   // 3. Determine feature needs from maturity quiz
   const desiredFeatureIds = Object.entries(answers)
     .filter(([questionId, answer]) => maturityNeedsMap[questionId] && answer === 0) // 'No' means they need the feature
     .map(([questionId]) => maturityNeedsMap[questionId]);
-    
+
   // 4. Calculate feature-based scores
   const featureScores = calculateFeatureScore(potentialProducts, ALL_FEATURES, desiredFeatureIds);
 
   // 5. Combine scores and sort
   const finalScoredProducts = potentialProducts.map(p => {
-      const baseScore = baseScores.get(p.id) || 50;
-      const featureScore = featureScores.get(p.id) || 0;
-      // Weight firmographics higher as they are primary decision factors
-      const combinedScore = baseScore * 0.7 + featureScore * 0.3; 
-      return { ...p, fitScore: combinedScore };
+    const baseScore = baseScores.get(p.id) || 50;
+    const featureScore = featureScores.get(p.id) || 0;
+    // Weight firmographics higher as they are primary decision factors
+    const combinedScore = baseScore * 0.7 + featureScore * 0.3;
+    return { ...p, fitScore: combinedScore };
   }).sort((a, b) => b.fitScore - a.fitScore);
-  
+
   if (finalScoredProducts.length === 0) {
-      const defaultProduct = ALL_PRODUCTS.find(p => p.id === 'advoware') || ALL_PRODUCTS[0];
-      return {
-          topProduct: defaultProduct,
-          alternatives: ALL_PRODUCTS.filter(p => p.id !== defaultProduct.id).slice(0, 3),
-          relevantFeatures: [],
-          missingFeaturesForTopProduct: [],
-      };
+    const defaultProduct = ALL_PRODUCTS.find(p => p.id === 'advoware') || ALL_PRODUCTS[0];
+    return {
+      topProduct: defaultProduct,
+      alternatives: ALL_PRODUCTS.filter(p => p.id !== defaultProduct.id).slice(0, 3),
+      relevantFeatures: [],
+      missingFeaturesForTopProduct: [],
+    };
   }
 
   const topProduct = finalScoredProducts[0];
   const alternatives = finalScoredProducts.slice(1, 4).filter(p => p.id !== topProduct.id);
 
-  const relevantFeatures = ALL_FEATURES.filter(feature => 
+  const relevantFeatures = ALL_FEATURES.filter(feature =>
     desiredFeatureIds.includes(feature.id) && (feature[topProduct.id] === true || typeof feature[topProduct.id] === 'string')
   );
 
-  const missingFeaturesForTopProduct = ALL_FEATURES.filter(feature => 
+  const missingFeaturesForTopProduct = ALL_FEATURES.filter(feature =>
     desiredFeatureIds.includes(feature.id) && !feature[topProduct.id]
   );
-  
+
   return { topProduct, alternatives, relevantFeatures, missingFeaturesForTopProduct };
 };
