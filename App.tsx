@@ -98,7 +98,10 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-light-bg text-brand-text font-sans flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-br from-brand-light-bg to-white text-brand-text font-sans flex flex-col items-center relative overflow-hidden">
+      {/* Decorative background blobs */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-secondary/30 rounded-full blur-[100px] pointer-events-none animate-float"></div>
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-accent-light/50 rounded-full blur-[100px] pointer-events-none animate-float" style={{ animationDelay: '2s' }}></div>
       <header className="sticky top-0 z-20 w-full bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
           <h1 className="text-3xl font-bold text-brand-primary text-center animate-slide-down-fade-in">{locales[language].app.title}</h1>

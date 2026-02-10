@@ -17,16 +17,22 @@
               'brand-accent': '#FF5439',
               'brand-secondary': '#D9D8FF',
               'brand-accent-light': '#FFEAE6',
-              'brand-light-bg': '#F7F8FA',
-              'brand-text': '#2B2D42',
+              'brand-light-bg': '#F0F2F5', // Slightly darker for better contrast with white cards
+              'brand-text': '#1A1C29',
+              'glass-border': 'rgba(255, 255, 255, 0.2)',
+              'glass-bg': 'rgba(255, 255, 255, 0.7)',
             },
             fontFamily: {
               sans: ['Manrope', 'sans-serif'],
             },
+            boxShadow: {
+              'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+              'premium': '0 20px 40px -5px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.04)',
+            },
             keyframes: {
               'pulse-cta': {
-                '0%, 100%': { transform: 'scale(1)', opacity: '1' },
-                '50%': { transform: 'scale(1.05)', opacity: '.9' },
+                '0%, 100%': { transform: 'scale(1)', opacity: '1', boxShadow: '0 0 0 0 rgba(255, 84, 57, 0.7)' },
+                '50%': { transform: 'scale(1.02)', opacity: '.95', boxShadow: '0 0 0 10px rgba(255, 84, 57, 0)' },
               },
               'fade-in': {
                 '0%': { opacity: '0', transform: 'translateY(10px)' },
@@ -36,14 +42,19 @@
                 '0%': { opacity: '0', transform: 'translateY(-20px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
               },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-5px)' },
+              }
             },
             animation: {
-              'pulse-cta': 'pulse-cta 2s infinite',
-              'fade-in': 'fade-in 0.8s ease-out forwards',
-              'fade-in-delay-1': 'fade-in 0.8s 0.3s ease-out forwards',
-              'fade-in-delay-2': 'fade-in 0.8s 0.6s ease-out forwards',
-              'fade-in-delay-3': 'fade-in 0.8s 0.9s ease-out forwards',
+              'pulse-cta': 'pulse-cta 3s infinite',
+              'fade-in': 'fade-in 0.6s ease-out forwards',
+              'fade-in-delay-1': 'fade-in 0.6s 0.2s ease-out forwards',
+              'fade-in-delay-2': 'fade-in 0.6s 0.4s ease-out forwards',
+              'fade-in-delay-3': 'fade-in 0.6s 0.6s ease-out forwards',
               'slide-down-fade-in': 'slide-down-fade-in 0.8s ease-out forwards',
+              'float': 'float 6s ease-in-out infinite',
             }
           }
         }

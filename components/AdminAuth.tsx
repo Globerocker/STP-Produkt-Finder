@@ -48,24 +48,24 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ children }) => {
     }
 
     return (
-        <div className="flex items-center justify-center min-h-[50vh] animate-fade-in">
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 max-w-sm w-full">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Admin Access</h2>
-                <form onSubmit={handleLogin} className="space-y-4">
+        <div className="flex items-center justify-center min-h-[60vh] animate-fade-in relative z-10">
+            <div className="bg-white/90 backdrop-blur-xl p-10 rounded-2xl shadow-premium border border-white/60 max-w-sm w-full">
+                <h2 className="text-3xl font-bold text-brand-primary mb-2 text-center">Admin Access</h2>
+                <p className="text-gray-500 text-center mb-8 text-sm">Please enter the secure password to view the dashboard.</p>
+                <form onSubmit={handleLogin} className="space-y-5">
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-1">Password</label>
                         <input
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all"
-                            placeholder="Enter admin password"
+                            className="w-full p-4 border border-gray-200 rounded-xl bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-primary/50 focus:border-brand-primary outline-none transition-all text-center tracking-widest"
+                            placeholder="••••••••"
                         />
                     </div>
-                    {error && <p className="text-red-500 text-sm font-medium">Incorrect password</p>}
+                    {error && <p className="text-red-500 text-sm font-medium text-center animate-shake">Incorrect password</p>}
                     <button
                         type="submit"
-                        className="w-full bg-brand-primary text-white font-bold py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors duration-300"
+                        className="w-full bg-brand-primary text-white font-bold py-3 px-4 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                     >
                         Unlock Dashboard
                     </button>
