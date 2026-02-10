@@ -64,9 +64,13 @@ export const getHubspotUrlParams = (answers: Answers, topProductName: string, la
   });
 
   // Add UTM parameters for tracking
-  params.set('utm_source', 'ppc');
-  params.set('utm_medium', 'Product Finder');
-  params.set('utm_campaign', '246924495-Product Finder');
+  params.set('utm_source', 'ProductFinder');
+  params.set('utm_medium', 'ProductFinder');
+  params.set('utm_campaign', 'ProductFinder_Recommendation');
+
+  // Custom HubSpot Source Tracking (Drill down)
+  params.set('hs_latest_source_drill_down_1', 'Productfinder');
+  params.set('hs_latest_source_drill_down_2', topProductName);
 
   return params;
 }
