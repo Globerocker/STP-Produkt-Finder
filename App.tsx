@@ -11,6 +11,7 @@ import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { getProductRecommendations, getLocalizedFeatures } from './lib/data';
 import { locales } from './lib/locales';
 import { trackPageView, trackQuizStart, trackQuizComplete, saveQuizResult } from './services/trackingService';
+import { Analytics } from '@vercel/analytics/react';
 
 const AppContent: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Landing);
@@ -119,6 +120,7 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => (
   <LanguageProvider>
     <AppContent />
+    <Analytics />
   </LanguageProvider>
 );
 
