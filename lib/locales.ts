@@ -71,21 +71,26 @@ const de = {
     contentHub: {
         title: 'Weiterführende Inhalte für Sie',
         items: {
-            webinar_digital_firm_2025: { title: 'Webinar: Die digitale Kanzlei 2025', description: 'Erfahren Sie, wie Sie mit Cloud-Technologie und KI Ihre Kanzlei zukunftssicher machen.' },
-            whitepaper_increase_efficiency: { title: 'Whitepaper: Effizienz steigern', description: 'Ein Leitfaden zur Optimierung von Workflows in mittelständischen Kanzleien.' },
-            blog_legal_tech_trends: { title: 'Blog: Legal Tech Trends', description: 'Lesen Sie unseren neuesten Artikel über die wichtigsten Technologietrends für Anwälte.' },
-            blog_successful_solo: { title: 'Blog: Erfolgreich als Einzelanwalt', description: 'Tipps und Tricks für den Kanzleialltag, von Mandatsgewinnung bis zur Abrechnung.' },
-            checklist_firm_foundation: { title: 'Checkliste: Kanzleigründung', description: 'Die wichtigsten Schritte für einen erfolgreichen Start in die Selbstständigkeit.' },
-            webinar_cloud_beginners: { title: 'Webinar: Cloud für Einsteiger', description: 'Entdecken Sie die Vorteile einer Cloud-basierten Kanzleisoftware für mehr Flexibilität.' },
-            webinar_digital_insolvency: { title: 'Webinar: Digitalisierung in der Insolvenzverwaltung', description: 'So optimieren Sie Ihre Prozesse von der Antragsstellung bis zur Verteilung.' },
-            whitepaper_new_gis: { title: 'Whitepaper: Das neue GIS', description: 'Alle Vorteile des neuen Gläubigerinformationssystems im Überblick.' },
-            blog_insolvency_law_news: { title: 'Blog: Aktuelles aus dem Insolvenzrecht', description: 'Unser Experte kommentiert die neuesten Gesetzesänderungen und Urteile.' },
-            whitepaper_ai_legal_dept: { title: 'Whitepaper: KI in der Rechtsabteilung', description: 'Wie künstliche Intelligenz die Vertragsanalyse und Recherche revolutioniert.' },
-            blog_cost_to_value: { title: 'Blog: Vom Cost- zum Value-Center', description: 'Strategien, um den Wertbeitrag Ihrer Rechtsabteilung im Unternehmen sichtbar zu machen.' },
-            webinar_knowledge_management: { title: 'Webinar: Wissensmanagement', description: 'So bauen Sie eine zentrale Wissensdatenbank auf und sichern wertvolles Know-how.' },
-            blog_creditor_rights: { title: 'Blog: Gläubigerrechte im Insolvenzfall', description: 'Ein Überblick über die wichtigsten Rechte und Pflichten für Unternehmen als Gläubiger.' },
-            tour_creditor_hub: { title: 'Produkt-Tour: Creditor Hub', description: 'Sehen Sie in einer kurzen Video-Tour, wie Sie Ihre Forderungen effizienter verwalten können.' },
-            download_claims_management: { title: 'Download: Leitfaden Forderungsmanagement', description: 'Best Practices zur Minimierung von Ausfallrisiken und zur Durchsetzung Ihrer Ansprüche.' },
+            case_study_brockmeier_ai: {
+                title: 'Case Study: Brockmeier · Faulhaber · Rudolph',
+                description: 'KI, die Anwaltskanzleien wirklich voranbringt – direkt in die Kanzleisoftware integriert.',
+                link: 'https://www.stp.one/de/resources/kanzlei-brockmeier-ki-die-anwaltskanzleien-wirklich-voranbringt-direkt-in-die-kanzleisoftware-integriert'
+            },
+            case_study_knowliah_holland: {
+                title: 'Case Study: Knowliah + Holland Colours',
+                description: 'Die Zukunft juristischer Workflows gestalten und Prozesse effizienter machen.',
+                link: 'https://www.stp.one/de/resources/knowliah-holland-colours-die-zukunft-juristischer-workflows-gestalten'
+            },
+            whitepaper_eu_data_act: {
+                title: 'Whitepaper: EU Data Act',
+                description: 'Ein neuer Rechtsrahmen für fairen Datenzugang in Europa – sind Sie vorbereitet?',
+                link: 'https://www.stp.one/de/resources/neuer-rechtsrahmen-für-fairen-datenzugang-in-europa'
+            },
+            whitepaper_eu_ai_act: {
+                title: 'Whitepaper: Navigating the EU AI Act',
+                description: 'Compliance-Strategien für Rechtsabteilungen und Kanzleien im Umgang mit KI.',
+                link: 'https://www.stp.one/de/resources/navigating-the-eu-ai-act-compliance-strategien-für-rechtsabteilungen-und-kanzleien'
+            }
         }
     },
     footer: {

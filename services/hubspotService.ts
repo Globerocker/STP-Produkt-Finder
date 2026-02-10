@@ -72,6 +72,12 @@ export const getHubspotUrlParams = (answers: Answers, topProductName: string, la
   params.set('hs_latest_source_drill_down_1', 'Productfinder');
   params.set('hs_latest_source_drill_down_2', topProductName);
 
+  // Link to internal session for easier lookup
+  const stpSessionId = localStorage.getItem('stp_tracker_session');
+  if (stpSessionId) {
+    params.set('stp_quiz_session_id', stpSessionId);
+  }
+
   return params;
 }
 
